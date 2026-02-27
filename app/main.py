@@ -7,6 +7,7 @@ class Person:
 
 
 def create_person_list(people: list) -> list:
+    Person.people.clear()
     person_list = [Person(per["name"], per["age"]) for per in people]
     for index, per in enumerate(people):
         if per.get("wife"):
